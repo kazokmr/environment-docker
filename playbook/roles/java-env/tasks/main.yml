@@ -1,0 +1,8 @@
+- name: install openJDK
+  yum: name=java-1.8.0-openjdk-devel state=present
+
+#- name: download bamboo-agent
+
+#- name: run bamboo-agent
+# shell: java -jar atlassian-bamboo-agent-installer-X.X-SNAPSHOT.jar http://bamboo-host-server:8085/bamboo/agentServer/
+

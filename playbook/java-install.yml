@@ -1,0 +1,6 @@
+# java-install
+- hosts: envDocker
+  connection: local
+  become: yes
+  roles:
+    - java-env
