@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "4096"
     vb.cpus = "2"
   end
-  config.vm.synced_folder "playbook","/playbook",:mount_options => ['dmode=775','fmode=664']
+  config.vm.synced_folder "playbook","/home/vagrant/playbook",:mount_options => ['dmode=775','fmode=664']
   config.vm.provision "shell", inline: $script
 end
 
@@ -19,5 +19,5 @@ $script = <<END
         yum -y install ansible
     fi
 
-    ansible-playbook -i /playbook/hosts-development /playbook/site.yml
+    ansible-playbook -i /home/vagrant/playbook/hosts-development /home/vagrant/playbook/site.yml
 END
