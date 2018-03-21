@@ -1,0 +1,6 @@
+# docker-compose-install
+- hosts: envDocker
+  connection: local
+  become: yes
+  roles:
+    - docker-compose

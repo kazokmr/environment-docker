@@ -1,0 +1,6 @@
+# common
+- hosts: envDocker
+  connection: local
+  become: yes
+  roles:
+    - common

@@ -1,0 +1,10 @@
+- name: install pip
+  yum: name=python-pip state=present
+
+- name: install pyYAML
+  pip:
+    name: PyYAML
+
+- name: install docker-compose
+  pip:
+    name: docker-compose

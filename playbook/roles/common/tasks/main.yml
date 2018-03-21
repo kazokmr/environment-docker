@@ -1,0 +1,11 @@
+#tasks file for common
+- name: disable selinux
+  selinux: state={{ selinux_mode }}
+
+- name: set timezone
+  shell: timedatectl set-timezone {{ timezone }}
+  register: set_timezone
+
+- name: set loclale
+  shell: localectl set-locale LANG={{ locale }}
+  register: set_locale

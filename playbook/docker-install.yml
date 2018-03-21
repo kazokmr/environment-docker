@@ -1,0 +1,6 @@
+# docker-install
+- hosts: envDocker
+  connection: local
+  become: yes
+  roles:
+    - docker
