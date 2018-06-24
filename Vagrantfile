@@ -19,5 +19,5 @@ $script = <<END
         yum -y install ansible
     fi
 
-    ansible-playbook -i /playbook/hosts-development /playbook/site.yml
+    ansible-playbook -i /playbook/hosts /playbook/site.yml
 END
